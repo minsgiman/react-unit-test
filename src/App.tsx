@@ -1,15 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Provider } from 'mobx-react';
+import { LoginStore, UserStore } from './stores';
+import UserInfo from './components/userInfo';
+import LoginInfo from './components/loginInfo';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
-    </div>
-  );
-}
+const user = new UserStore(['ok', 'ggo']);
+const login = new LoginStore();
+
+const App = () => {
+	return (
+		<Provider user={user} login={login}>
+			<div>lorem</div>
+			<UserInfo />
+			<LoginInfo />
+		</Provider>
+	);
+};
 
 export default App;

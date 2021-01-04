@@ -4,12 +4,9 @@ import { axe } from 'jest-axe';
 import App from './App';
 
 describe('App', () => {
-  test('should not have accessibility violations', async () => {
-    const { container } = render(<App />);
+	test('should not have accessibility violations', async () => {
+		const { container } = render(<App />);
 
-    expect(await axe(container)).toHaveNoViolations();
-  });
+		expect(await axe(container)).toHaveNoViolations();
+	});
 });
-
-
-
