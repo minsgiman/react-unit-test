@@ -6,7 +6,7 @@ import UserInfo from './components/userInfo';
 import LoginInfo from './components/loginInfo';
 import UserNames from './components/userNames';
 
-const user = new UserStore(['user2', 'ok']);
+const user = new UserStore(['user3', 'ok']);
 const login = new LoginStore();
 
 const App = () => {
